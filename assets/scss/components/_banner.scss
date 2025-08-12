@@ -1,0 +1,257 @@
+/*********************************
+/*  Banner Section Start
+*********************************/
+.banner__section {
+    margin-top: 26px;
+}
+.banner__wrapper {
+    @include flexbox-between;
+    align-items: flex-start;
+    gap: 30px;
+
+    @include respond(tabland) {
+        flex-direction: column;
+    }
+    @include respond(phone-sm) {
+        gap: 10px;
+    }
+}
+
+.banner__slider {
+    width: 100%;
+
+    .swiper__pagination {
+        .swiper-pagination-bullets {
+            position: absolute;
+            bottom: 15px;
+        }
+    }
+
+    .swiper__navigation {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        width: auto;
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 28px;
+            height: 28px;
+            border-radius: var(--radius);
+        }
+    }
+}
+
+.bannerSlide__wrapper {
+    background: var(--color-primary-50);
+    padding: 95px 50px;
+    border-radius: var(--radius-12);
+    position: relative;
+    z-index: 1;
+
+    @include respond(tabport) {
+        padding: 45px 35px;
+    }
+    @include respond(phone-xm) {
+        padding: 75px 20px;
+    }
+
+    .hero__text {
+        font-family: var(--font-default);
+        max-width: 488px;
+
+        .subtitle {
+            font-weight: var(--font-black);
+            font-size: 36px;
+            line-height: 48px;
+            letter-spacing: 2%;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: var(--color-state-800);
+
+            @include respond(tabport) {
+                font-size: 28px;
+                line-height: 38px;
+            }
+            @include respond(phone-xm) {
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+        .title {
+            font-weight: var(--font-black);
+            font-size: 48px;
+            line-height: 56px;
+            text-transform: uppercase;
+            color: var(--color-primary-900);
+            margin-bottom: 12px;
+
+            @include respond(tabport) {
+                font-size: 42px;
+                line-height: 48px;
+            }
+            @include respond(phone-xm) {
+                font-size: 35px;
+                line-height: 38px;
+            }
+        }
+        .desc {
+            color: var(--color-state-800);
+            margin: 0;
+        }
+        .btn__group {
+            margin-top: 43px;
+
+            @include respond(tabport) {
+                margin-top: 30px;
+            }
+
+            .rs-btn {
+                font-weight: var(--font-medium);
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 2%;
+                padding: 12px 28px;
+
+                @include respond(tabport) {
+                    padding: 10px 28px;
+                }
+            }
+        }
+    }
+    .banner__thumb {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 448px;
+        z-index: -1;
+        // pointer-events: none;
+
+        @include respond(tabland) {
+            max-width: 380px;
+        }
+        @include respond(tabport) {
+            max-width: 300px;
+        }
+        @include respond(phone) {
+            display: none;
+        }
+    }
+}
+
+// Banner Card
+.banner__card {
+    max-width: 328px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    @include respond(tabland) {
+        flex-direction: row;
+        max-width: 100%;
+    }
+    @include respond(phone-sm) {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card__thumb {
+        background: var(--color-bg);
+        border-radius: var(--radius-12);
+        aspect-ratio: 3.2 / 2.1;
+
+        @include respond(phone-sm) {
+            aspect-ratio: 2.6 / 1.8;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: var(--radius-12);
+        }
+    }
+}
+
+/*********************************
+/*  Banner Section End
+*********************************/
+
+/*********************************
+/* Swiper Navigation & Pagination 
+*********************************/
+.swiper__navigation {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    z-index: 9;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        font-size: 22px;
+        height: 44px;
+        width: 44px;
+        color: var(--color-state-600);
+        background: var(--color-white);
+        border: none;
+        @include flexbox-center;
+        border-radius: 50%;
+        transition: var(--transition);
+        margin: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        &.swiper-button-disabled {
+            color: var(--color-state-300);
+            opacity: 1;
+        }
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+            background: var(--color-primary-900);
+            border-color: var(--color-primary-900);
+            color: var(--color-white);
+        }
+    }
+}
+
+.swiper__pagination {
+    .swiper-pagination-bullets {
+        position: relative;
+        bottom: 0px;
+        z-index: 99;
+        display: inline-flex;
+        justify-content: center;
+        margin-top: 30px;
+        gap: 8px;
+        height: 12px;
+
+        .swiper-pagination-bullet {
+            position: relative;
+            background: var(--color-state-400);
+            margin: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 30px;
+            opacity: 1;
+            transition: var(--transition);
+
+            &-active {
+                background: var(--color-primary-900);
+                width: 32px;
+            }
+        }
+    }
+}
+
+/*********************************
+/* Swiper Navigation & Pagination 
+*********************************/

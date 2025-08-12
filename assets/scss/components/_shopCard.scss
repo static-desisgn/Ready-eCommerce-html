@@ -1,0 +1,236 @@
+/*********************************
+/*  Shop Card Start
+*********************************/
+.shopCard {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    transition: var(--transition);
+
+    &:hover {
+        .thumb {
+            img {
+                transform: scale(1.05);
+            }
+        }
+        .content {
+            .title {
+                a {
+                    color: var(--color-primary-300);
+                }
+            }
+        }
+    }
+    .thumb {
+        position: relative;
+        aspect-ratio: 16/4.2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .badges {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+    }
+
+    &__content {
+        background: var(--color-primary-900);
+        padding: 16px;
+        padding-top: 0;
+
+        .shopLogo {
+            width: 64px;
+            height: 64px;
+            @include flexbox-center;
+            display: inline-flex;
+            background: var(--color-state-300);
+            border-radius: 50%;
+            position: relative;
+            margin-top: -32px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                border-radius: 50%;
+            }
+        }
+        .content {
+            margin-top: 12px;
+
+            .title {
+                font-weight: var(--font-bold);
+                font-size: 16px;
+                line-height: 24px;
+                color: var(--color-white);
+                transition: var(--transition);
+                margin: 0;
+
+                a {
+                    color: currentColor;
+                    display: block;
+                    transition: var(--transition);
+                }
+            }
+            .meta {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                gap: 10px 36px;
+
+                span {
+                    position: relative;
+                    font-weight: var(--font-regular);
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: var(--color-primary-300);
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        height: 15px;
+                        width: 1px;
+                        background: #69bef1;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: -18px;
+                    }
+
+                    &:last-of-type {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+                .star {
+                    color: var(--color-white);
+
+                    i {
+                        color: var(--color-yellow);
+                    }
+                }
+            }
+            .btn__group {
+                margin-top: 12px;
+
+                .solid__btn {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: var(--color-white);
+
+                    &:hover {
+                        color: var(--color-primary-300);
+                    }
+                }
+            }
+        }
+    }
+    &.v2 {
+        border: 1px solid var(--color-state-100);
+
+        .thumb {
+            position: relative;
+            aspect-ratio: 16/5.4;
+        }
+        .shopCard {
+            &__content {
+                background: var(--color-white);
+                .shopLogo {
+                    height: 88px;
+                    width: 88px;
+                    margin-top: -44px;
+                    box-shadow: 0px 10px 10px -5px #00000005, 0px 20px 25px -5px #0000000d;
+                }
+                .content {
+                    .title {
+                        font-weight: var(--font-bold);
+                        font-size: 18px;
+                        line-height: 24px;
+                        letter-spacing: 2%;
+                        color: var(--color-state-900);
+                    }
+                    .meta {
+                        justify-content: center;
+                        span {
+                            position: relative;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: var(--color-state-500);
+
+                            span {
+                                gap: 2px;
+                            }
+
+                            b {
+                                color: var(--color-state-800);
+                            }
+
+                            &::after {
+                                background: var(--color-state-300);
+                                right: -18px;
+                            }
+                        }
+                    }
+                    .btn__group {
+                        .rs-btn {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 4px;
+                            padding: 11px 30px;
+
+                            i {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            border-color: var(--color-primary-200);
+            .content {
+                .title {
+                    a {
+                        color: var(--color-primary-700);
+                    }
+                }
+                .btn__group {
+                    .rs-btn {
+                        background: var(--color-primary-900);
+                        color: var(--color-white);
+                    }
+                }
+            }
+        }
+    }
+}
+.badges {
+    position: relative;
+    font-weight: var(--font-medium);
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-white);
+    background: var(--color-primary-700);
+    border-radius: 30px;
+    padding: 2px 4px;
+    text-transform: capitalize;
+    display: inline-block;
+    z-index: 1;
+
+    &-green {
+        background: var(--color-green);
+    }
+}
+/*********************************
+/*  Shop Card End
+*********************************/

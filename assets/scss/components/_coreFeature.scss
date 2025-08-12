@@ -1,0 +1,70 @@
+/*********************************
+/*  Core Feature Section Start
+*********************************/
+.coreFeature__wrapper {
+    background: var(--color-white);
+    padding: 24px;
+    border-radius: var(--radius-12);
+    border: 1px dashed var(--color-state-300);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    box-shadow: 0px 10px 10px -5px #00000005, 0px 20px 25px -5px #0000000d;
+
+    @include respond(xl) {
+        gap: 20px;
+    }
+    @include respond(medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond(tabland) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(tabport) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(phone) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+
+        .icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-12);
+            @include flexbox-center;
+            transition: var(--transition);
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: var(--radius-12);
+                transition: var(--transition);
+            }
+        }
+        .content {
+            flex: 1;
+
+            h4 {
+                font-family: var(--font-default);
+                font-weight: var(--font-bold);
+                font-size: 16px;
+                line-height: 24px;
+                color: var(--color-state-950);
+                margin-bottom: 8px;
+            }
+            p {
+                font-weight: var(--font-regular);
+                color: var(--color-state-700);
+                margin: 0;
+            }
+        }
+    }
+}
+/*********************************
+/*  Core Feature Section End
+*********************************/

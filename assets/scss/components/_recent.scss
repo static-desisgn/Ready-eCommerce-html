@@ -1,0 +1,26 @@
+/*********************************
+/* Recent Section Start
+*********************************/
+.recent__wrapper {
+    .swiper__navigation {
+        position: initial;
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            left: 0;
+            margin: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0px 10px 10px -5px #00000005, 0px 20px 25px -5px #0000000d;
+            border: 1px solid var(--color-state-200);
+        }
+        .swiper-button-next {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+/*********************************
+/* Recent Section End
+*********************************/

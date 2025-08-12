@@ -1,0 +1,76 @@
+/*********************************
+/*  Category Section Start
+*********************************/
+.category__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+
+    @include respond(tabport) {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+    }
+    @include respond(phone) {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}
+
+.category__item {
+    border: 1px solid var(--color-state-100);
+    padding: 20px;
+    display: block;
+    border-radius: var(--radius-16);
+    transition: var(--transition);
+
+    &:hover {
+        border-color: var(--color-primary-200);
+    }
+    .category {
+        &__thumb {
+            max-width: 156px;
+            max-height: 156px;
+            aspect-ratio: 1/1;
+            width: 100%;
+            height: auto;
+            display: inline-block;
+            margin-bottom: 24px;
+            overflow: hidden;
+            transition: var(--transition);
+
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 156px;
+                transition: var(--transition);
+            }
+        }
+        &__content {
+            h4 {
+                font-weight: var(--font-medium);
+                font-size: 16px;
+                line-height: 24px;
+                color: var(--color-state-600);
+                margin-bottom: 0px;
+                transition: var(--transition);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
+    &:hover {
+        .category {
+            &__thumb {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+/*********************************
+/*  Category Section End
+*********************************/

@@ -1,0 +1,62 @@
+/*********************************
+/*  Section Tittle Start
+*********************************/
+.section__title {
+    &-wrapper {
+        margin-bottom: 32px;
+
+        &.flex-item {
+            @include flexbox-between;
+            gap: 16px;
+            max-width: 100%;
+            margin-bottom: 32px;
+            position: relative;
+
+            .section__btn {
+                margin: 0;
+            }
+        }
+        &.text-center {
+            margin: 0 auto 32px;
+        }
+    }
+
+    .title {
+        font-weight: var(--font-bold);
+        font-size: 30px;
+        line-height: 36px;
+        color: var(--color-state-800);
+        margin: 0;
+
+        @include respond(phone) {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+    .section__btn {
+        .solid__btn {
+            font-family: var(--font-default);
+            font-weight: var(--font-regular);
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--color-state-600);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+
+            i {
+                width: 24px;
+                height: 24px;
+                @include flexbox-center;
+            }
+            &:hover {
+                color: var(--color-primary-500);
+            }
+        }
+    }
+}
+
+/*********************************
+/*  Section Tittle End
+*********************************/
