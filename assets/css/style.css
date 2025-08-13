@@ -3937,7 +3937,7 @@ p {
   font-size: 16px;
   line-height: 24px;
   color: var(--color-primary-900);
-  padding: 15px 23px;
+  padding: 12px 24px;
   border: none;
   display: inline-block;
   text-transform: capitalize;
@@ -6836,7 +6836,7 @@ p {
   text-overflow: ellipsis;
 }
 
-.category__list {
+.categories__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6845,11 +6845,14 @@ p {
           align-items: center;
   gap: 12px;
   overflow-x: auto;
+  width: calc(100% - 200px);
+  padding-bottom: 5px;
 }
-.category__list li {
+.categories__list li {
   list-style: none;
+  white-space: nowrap;
 }
-.category__list li a {
+.categories__list li a {
   font-weight: var(--font-regular);
   font-size: 14px;
   line-height: 24px;
@@ -6862,13 +6865,90 @@ p {
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
-.category__list li a:hover {
+.categories__list li a:hover {
   border: 1px solid var(--color-primary-900);
   color: var(--color-primary-900);
 }
 
+.filter__options {
+  border-left: 1px solid var(--color-state-200);
+  padding-left: 32px;
+}
+
+.filter__btn.rs-btn {
+  background: var(--color-state-200);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+.filter__btn.rs-btn img {
+  width: 24px;
+  height: auto;
+  display: block;
+}
+
 /*********************************
 /*  Filter Area End
+*********************************/
+/*********************************
+/*  Filter List Start
+*********************************/
+.filters__title h4 {
+  font-family: var(--font-default);
+  font-weight: var(--font-medium);
+  font-size: 16px;
+  line-height: 24px;
+  color: #06161c;
+  margin-bottom: 12px;
+}
+
+.filterList {
+  max-height: 290px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.filterList li {
+  list-style: none;
+  font-family: var(--font-default);
+  font-weight: var(--font-regular);
+  font-size: 16px;
+  line-height: 24px;
+  color: #203744;
+  margin-bottom: 12px;
+  padding: 12px;
+}
+.filterList li:last-of-type {
+  margin-bottom: 0;
+}
+
+.ratings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0px;
+}
+.ratings i {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: var(--color-bg);
+}
+.ratings i.active {
+  color: var(--color-yellow);
+}
+
+/*********************************
+/*  Filter List End
 *********************************/
 /*********************************
 /*  Shop Card Start
@@ -7713,6 +7793,91 @@ p {
 
 /*********************************
 /*  Pagination Design End
+*********************************/
+/*********************************
+/*  Contact Form Start
+*********************************/
+.contact__title {
+  margin-bottom: 32px;
+}
+.contact__title .title {
+  font-weight: var(--font-bold);
+  font-size: 30px;
+  line-height: 36px;
+  color: var(--color-state-950);
+  margin-bottom: 12px;
+  display: block;
+}
+.contact__title p {
+  font-weight: var(--font-regular);
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 2%;
+  color: var(--color-state-950);
+  margin-bottom: 0px;
+  display: block;
+}
+
+form .input-group {
+  display: block;
+  margin-bottom: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+form .input-group .select2-container .select2-selection--single {
+  font-weight: var(--font-light);
+  background: transparent;
+  padding: 12px 16px;
+}
+form .input-group .select2-container .select2-selection__rendered {
+  color: var(--color-content);
+}
+form .input-group label {
+  font-family: var(--font-default);
+  font-weight: var(--font-regular);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-state-700);
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+form .input-group label .required {
+  color: var(--color-danger);
+}
+form .input-group .form-control {
+  font-family: var(--font-default);
+  font-weight: var(--font-regular);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-state-400);
+  background: transparent;
+  border: 1px solid var(--color-state-200);
+  border-radius: 8px !important;
+  padding: 15px;
+  width: 100%;
+}
+form .input-group .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  border-color: var(--color-primary-900);
+}
+form .input-group textarea.form-control,
+form .input-group textarea {
+  border-radius: 8px;
+  height: auto;
+}
+
+.contact__thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/*********************************
+/*  Contact Form End
 *********************************/
 /*********************************
 /* Footer Section Start
