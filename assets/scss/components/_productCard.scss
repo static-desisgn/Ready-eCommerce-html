@@ -341,6 +341,19 @@
     background: conic-gradient(from 180deg at 50% 50%, #8b5cf6 0deg, #115293 132.5deg, #5c87f6 271.26deg, #8b5cf6 360deg);
     padding: 20px 20px 33px;
     border-radius: 12px;
+
+    &.v2 {
+        background: linear-gradient(90deg, #115293 0%, #2e78c3 36.81%, #5c87f6 75.35%, #115293 100%);
+        padding: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        @include respond(tabport) {
+            flex-direction: column;
+        }
+    }
     .thumb {
         margin-bottom: 16px;
         img {
@@ -410,6 +423,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+
+    @include respond(tabport) {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 .shop__wrap {
     max-width: 90px;
@@ -450,6 +468,10 @@
     width: calc(100% - 200px);
     padding-bottom: 5px;
 
+    @include respond(tabport) {
+        width: calc(100% - 0px);
+    }
+
     li {
         list-style: none;
         white-space: nowrap;
@@ -476,6 +498,11 @@
 .filter__options {
     border-left: 1px solid var(--color-state-200);
     padding-left: 32px;
+
+    @include respond(tabport) {
+        padding: 0;
+        border: none;
+    }
 }
 .filter__btn {
     &.rs-btn {
@@ -537,6 +564,7 @@
 // Filters Titles
 .filter__item {
     margin-bottom: 32px;
+    padding-right: 14px;
 
     &:last-of-type {
         margin-bottom: 0;
@@ -613,136 +641,64 @@
     }
 }
 
-// .load__btn {
-//     margin-top: 12px;
-//     button {
-//         background: transparent;
-//         padding: 0;
-//         border: none;
-//         outline: none;
-//         color: var(--color-primary);
-//     }
-// }
+// Filter Range Container
+.price__slider {
+    margin-top: 10px;
+    #slider__range {
+        position: relative;
+        background: var(--color-state-200);
+        width: 100%;
+        height: 8px;
+        border-radius: 30px;
 
-// .tagItem {
-//     display: flex;
-//     align-items: center;
-//     flex-wrap: wrap;
-//     gap: 16px;
+        .ui-slider-range {
+            background: var(--color-primary-900);
+            position: absolute;
+            height: 8px;
+            border-radius: 30px;
+            margin-left: 5px;
+        }
+        .ui-slider-handle {
+            position: absolute;
+            top: -8px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: var(--color-primary-900);
+            outline: none;
+            cursor: pointer;
+            border: 2px solid #fff;
+        }
+    }
+    .price__btm {
+        @include flexbox-between;
+        margin-top: 10px;
 
-//     li {
-//         list-style: none;
-//         margin: 0;
-//         font-weight: var(--font-regular);
-//         font-size: 16px;
-//         line-height: 26px;
-//         color: var(--color-heading2);
+        span {
+            font-weight: var(--font-regular);
+            font-size: 12px;
+            line-height: 16px;
+            color: var(--color-state-400);
+        }
+    }
+}
+.price {
+    &__amount {
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
-//         a {
-//             color: currentColor;
-//             padding: 7px 16px;
-//             display: block;
-//             border-radius: 30px;
-//             background: var(--color-bg);
-//             transition: var(--transition);
+        span {
+            font-family: var(--font-default);
+            font-weight: var(--font-regular);
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--color-state-900);
+        }
+    }
+}
 
-//             &:hover {
-//                 background: var(--color-primary);
-//                 color: var(--color-white);
-//             }
-//         }
-//     }
-// }
-// .ratings {
-//     display: flex;
-//     align-items: center;
-//     flex-wrap: wrap;
-//     gap: 0px;
-
-//     li {
-//     }
-//     i {
-//         list-style: none;
-//         margin: 0;
-//         padding: 0;
-//         font-size: 20px;
-//         color: var(--color-bg);
-//         &.active {
-//             color: var(--color-yellow);
-//         }
-//     }
-// }
-
-// // Filter Range Container
-// .price__slider {
-//     #slider__range {
-//         position: relative;
-//         background: var(--color-bg);
-//         width: 100%;
-//         height: 4px;
-//         border-radius: 30px;
-
-//         .ui-slider-range {
-//             background: var(--color-primary);
-//             position: absolute;
-//             height: 4px;
-//             border-radius: 30px;
-//             margin-left: 5px;
-//         }
-//         .ui-slider-handle {
-//             position: absolute;
-//             top: -5px;
-//             width: 12px;
-//             height: 12px;
-//             border-radius: 50%;
-//             display: inline-block;
-//             background-color: var(--color-primary);
-//             outline: none;
-//             cursor: pointer;
-//         }
-//     }
-
-//     .price {
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         margin-top: 16px;
-
-//         span {
-//             font-family: var(--font-default);
-//             font-weight: var(--font-regular);
-//             font-size: 16px;
-//             line-height: 100%;
-//             color: var(--color-heading);
-//         }
-//         &__amount {
-//             display: flex;
-//             align-items: center;
-//             gap: 10px;
-
-//             span {
-//                 width: 70px;
-//                 height: 40px;
-//                 border-radius: 30px;
-//                 background: var(--color-bg);
-//                 color: var(--color-heading2);
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-//             }
-//             .middle {
-//                 height: 40px;
-//                 width: 40px;
-//                 border-radius: 50%;
-//                 background: var(--color-heading);
-//                 color: var(--color-white);
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center;
-//             }
-//         }
-//     }
-// }
 /*********************************
 /*  Filter List End
 *********************************/

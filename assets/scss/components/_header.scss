@@ -7,7 +7,7 @@
     top: 0;
     width: 100%;
     z-index: 99;
-    transition: var(--transition);
+    // transition: var(--transition);
 
     &__infoArea {
         background: var(--color-primary-700);
@@ -396,11 +396,15 @@
 }
 
 .nav-bg {
+    position: sticky;
+    top: -37px;
     background: var(--color-white);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    top: 0;
-    position: sticky;
     z-index: 999;
+
+    @include respond(phone-sm) {
+        top: -62px;
+    }
 }
 /*********************************
 /*  Header End
@@ -889,12 +893,13 @@
             }
         }
         &__body {
-            padding: 16px 24px;
+            padding: 16px 10px 16px 24px;
             // overflow: auto;
             height: 100vh;
 
             .items__overflow {
-                height: calc(100vh - 120px);
+                height: calc(100vh - 160px);
+                // height: calc(100vh - 80px);
                 overflow: auto;
 
                 @include respond(phone) {
@@ -907,7 +912,7 @@
                 padding-bottom: 10px;
 
                 @include respond(phone) {
-                    height: calc(100vh - 240px);
+                    height: calc(100vh - 180px);
                 }
             }
             .login__btn {

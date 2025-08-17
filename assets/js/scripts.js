@@ -250,6 +250,24 @@
         });
     }
 
+    /*********************************
+    /* Price Range Slider
+    *********************************/
+    if ($("#slider__range").length > 0) {
+        $("#slider__range").slider({
+            range: true,
+            min: 0,
+            max: 5000,
+            values: [300, 4200],
+            slide: function (event, ui) {
+                $("#minamount").html("$" + ui.values[0]);
+                $("#maxamount").html("$" + ui.values[1]);
+            },
+        });
+        $("#minamount").html("$" + $("#slider__range").slider("values", 0));
+        $("#maxamount").html("$" + $("#slider__range").slider("values", 1));
+    }
+
     /**********************************
      *  Back to Top JS
      **********************************/
