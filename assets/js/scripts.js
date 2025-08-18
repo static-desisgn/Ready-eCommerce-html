@@ -268,6 +268,47 @@
         $("#maxamount").html("$" + $("#slider__range").slider("values", 1));
     }
 
+    /*********************************
+    /*  productGallerySwiper Slider
+    *********************************/
+    document.addEventListener("DOMContentLoaded", function () {
+        var gallery__thumb = new Swiper(".gallery__thumb", {
+            spaceBetween: 16,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+            centerSlide: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 3,
+                },
+                479: {
+                    slidesPerView: 4,
+                },
+                767: {
+                    slidesPerView: 3,
+                },
+                992: {
+                    slidesPerView: 4,
+                },
+                1200: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+
+        var gallery__main = new Swiper(".gallery__main", {
+            spaceBetween: 16,
+            navigation: {
+                nextEl: ".galleryThumb-swipe-next",
+                prevEl: ".galleryThumb-swipe-prev",
+            },
+            thumbs: {
+                swiper: gallery__thumb,
+            },
+        });
+    });
+
     /**********************************
      *  Back to Top JS
      **********************************/
