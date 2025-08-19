@@ -275,9 +275,13 @@
         var gallery__thumb = new Swiper(".gallery__thumb", {
             spaceBetween: 16,
             slidesPerView: 4,
-            freeMode: true,
-            watchSlidesProgress: true,
-            centerSlide: true,
+            // freeMode: true,
+            // watchSlidesProgress: true,
+            // centerSlide: true,
+            navigation: {
+                nextEl: ".gallery-swipe-next",
+                prevEl: ".gallery-swipe-prev",
+            },
             breakpoints: {
                 320: {
                     slidesPerView: 3,
