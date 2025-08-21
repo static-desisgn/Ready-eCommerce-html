@@ -1,0 +1,52 @@
+/*********************************
+/*  Accordion Area Start
+*********************************/
+.custom__accordion {
+    border-bottom: 1px solid var(--color-state-200);
+    .accordion {
+        &-item {
+            background: transparent;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+        }
+        &-button {
+            font-family: var(--font-default);
+            font-weight: var(--font-medium);
+            font-size: 30px;
+            line-height: 40px;
+            color: var(--color-state-950);
+            padding: 16px 40px 16px 0;
+            background: #fff;
+            border: none;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            span {
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 2%;
+                color: var(--color-primary-900);
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+            &:not(.collapsed) {
+                background: transparent;
+                box-shadow: none;
+            }
+            &::after {
+                position: absolute;
+                right: 16px;
+                background-size: 18px;
+                height: 18px;
+                width: 18px;
+            }
+        }
+    }
+}
+/*********************************
+/*  Accordion Area End
+*********************************/

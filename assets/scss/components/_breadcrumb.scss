@@ -1,0 +1,71 @@
+/*********************************
+/*  Breadcrumb Area Start
+*********************************/
+.breadcrumb__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px 20px;
+    justify-content: space-between;
+    padding: 27px 0 24px;
+    border-bottom: 1px solid var(--color-border);
+    flex-wrap: wrap;
+
+    @include respond(phone-xm) {
+        flex-direction: column;
+    }
+    .title__area {
+        .title {
+            font-family: var(--font-default);
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: var(--font-medium);
+            color: var(--color-heading);
+            margin: 0;
+        }
+    }
+    .breadcrumb__link {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        li {
+            list-style: none;
+            font-family: var(--font-default);
+            font-size: 14px;
+            font-weight: var(--font-regular);
+            line-height: 20px;
+            color: var(--color-state-600);
+            position: relative;
+
+            &::before {
+                content: "/";
+                position: absolute;
+                left: -9px;
+                font-size: 18px;
+                font-family: "remixicon";
+                font-weight: var(--font-regular);
+                top: 0;
+            }
+            i {
+                font-size: 24px;
+            }
+
+            &:first-of-type {
+                &::before {
+                    display: none;
+                }
+            }
+
+            a {
+                color: currentColor;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                transition: var(--transition);
+            }
+        }
+    }
+}
+/*********************************
+/*  Breadcrumb Area End
+*********************************/
