@@ -1,0 +1,100 @@
+/*********************************
+/*  Modal Area Start
+*********************************/
+.custom__modal {
+    .modal {
+        &-dialog {
+            max-width: 538px;
+        }
+        &-content {
+            background: var(--color-white);
+            border: 1px solid var(--color-white);
+            border-radius: 16px;
+            padding: 32px;
+        }
+        &__header {
+            margin-bottom: 32px;
+            .title {
+                font-weight: var(--font-medium);
+                font-size: 24px;
+                line-height: 32px;
+                color: var(--color-state-950);
+                margin: 0;
+            }
+            p,
+            .desc {
+                font-size: 18px;
+                line-height: 28px;
+                color: var(--color-state-950);
+                margin: 12px 0 0;
+            }
+            .btn-close {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                @include flexbox-center;
+                background-color: var(--color-state-100);
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+// Success Area Start
+.success__area {
+    .icon {
+        width: 80px;
+        height: 80px;
+        background: #45bc1a;
+        border-radius: 50%;
+        @include flexbox-center;
+        display: inline-flex;
+        font-size: 50px;
+        color: var(--color-white);
+    }
+    .content {
+        margin-top: 24px;
+
+        h4 {
+            font-weight: var(--font-bold);
+            font-size: 30px;
+            line-height: 36px;
+            color: #06161c;
+            margin-bottom: 20px;
+
+            @include respond(phone-sm) {
+                font-size: 24px;
+            }
+        }
+        .order {
+            font-weight: var(--font-regular);
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--color-state-950);
+            padding: 14px;
+            background: var(--color-state-100);
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 28px;
+            margin: 0;
+            color: var(--color-state-700);
+
+            @include respond(phone-sm) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+/*********************************
+/*  Modal Area End
+*********************************/

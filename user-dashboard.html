@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Ready - eCommerce Html Template</title>
+        <meta name="description" content="Ready - eCommerce Html Template" />
+        <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/f-icon" />
+
+        <!-- Remix Icon -->
+        <link rel="stylesheet" href="assets/css/remixicon.css" />
+        <!-- bootstraph -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <!-- FancyBox -->
+        <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
+        <!-- Swiper Slider -->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+        <!-- Select 2 Css -->
+        <link rel="stylesheet" href="assets/css/select2.min.css" />
+        <!-- User's CSS Here -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <!-- Header Start -->
+        <header class="header">
+            <!-- Nav Start -->
+            <nav class="nav d-block p-0 m-0">
+                <!-- Header Info Start -->
+                <div class="header__infoArea">
+                    <div class="container">
+                        <div class="header__info">
+                            <ul class="info__list">
+                                <li><a href="#">Become a Seller</a></li>
+                                <li>Hotline: <a href="tel:01316263045">+880 1316263045</a></li>
+                            </ul>
+                            <div class="meta__item">
+                                <div class="dropdown__item">
+                                    <a href="#" class="selected">English</a>
+                                    <ul class="dropdown__list">
+                                        <li><a href="#">English</a></li>
+                                        <li><a href="#">Bangla</a></li>
+                                        <li><a href="#">Indian</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Top Bar Start -->
+                <div class="header__topbar">
+                    <div class="container">
+                        <div class="header__inner">
+                            <!-- Header Left Start -->
+                            <div class="header__left">
+                                <!-- Header Logo -->
+                                <div class="header__logo">
+                                    <a href="index.html">
+                                        <img src="assets/images/logo/logo.png" alt="logo" />
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Header Left End -->
+
+                            <!-- Header Search -->
+                            <form action="#" class="search__form d-md-block d-none">
+                                <input type="search" name="search" class="form-control" placeholder="Search for products..." />
+                                <button type="submit"><i class="ri-search-line"></i></button>
+                            </form>
+
+                            <!-- Header Right Start -->
+                            <div class="header__right">
+                                <ul class="header__meta">
+                                    <li class="d-md-flex d-none">
+                                        <a href="#">
+                                            <div class="icon">
+                                                <img src="assets/images/heart.svg" alt="wishlist" />
+                                            </div>
+                                            <span class="count">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="d-md-flex d-none">
+                                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                                            <div class="icon">
+                                                <img src="assets/images/cart-bag.svg" alt="cart" />
+                                            </div>
+                                            <span class="count">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="d-md-none d-flex">
+                                        <a href="#" class="search">
+                                            <div class="icon">
+                                                <img src="assets/images/search-icon.svg" alt="cart" />
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="login__btn d-md-flex d-none">
+                                    <a href="#">
+                                        <span>Login</span>
+                                        <div class="icon">
+                                            <img src="assets/images/user.svg" alt="cart" />
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Header Toggle -->
+                                <div class="header__toggle" data-bs-toggle="offcanvas" data-bs-target="#headerOffcanvas">
+                                    <div class="toggle__bar"></div>
+                                </div>
+                            </div>
+                            <!-- Header Right End -->
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Nav End -->
+
+            <!-- Header menu Flyout -->
+            <div class="custom__offcanvas offcanvas offcanvas-start" tabindex="-1" id="headerOffcanvas">
+                <!-- Haeder Start -->
+                <div class="offcanvas__header">
+                    <div class="brand-logo">
+                        <div class="title">Menu</div>
+                    </div>
+                    <button type="button" class="btn__close" data-bs-dismiss="offcanvas">
+                        <i class="ri-close-large-line"></i>
+                    </button>
+                </div>
+                <!-- Haeder End -->
+                <div class="offcanvas__body">
+                    <div class="items__overflow">
+                        <div class="login__btn">
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="assets/images/user.svg" alt="cart" />
+                                </div>
+                                <span>Login</span>
+                                <div class="ms-auto text-20">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="login__btn meta__btn">
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="assets/images/heart.svg" alt="wishlist" />
+                                </div>
+                                <span>Wishlist</span>
+                                <span class="count ms-auto">2</span>
+                            </a>
+                            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                                <div class="icon">
+                                    <img src="assets/images/cart-bag.svg" alt="cart" />
+                                </div>
+                                <span>My Cart</span>
+                                <span class="count ms-auto">2</span>
+                            </a>
+                        </div>
+                        <ul class="offcanvas-nav-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="has-dropdown">
+                                <a href="#" class="nav-link">Shops</a>
+                                <ul class="sub-menu">
+                                    <li><a href="all-shop.html">All Shop</a></li>
+                                    <li><a href="#">Shop Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Most Popular</a></li>
+                            <li><a href="#">Best Deal</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Header menu Flyout -->
+
+            <!-- Cart menu Flyout -->
+            <div class="custom__offcanvas offcanvas offcanvas-start w-51" tabindex="-1" id="cartOffcanvas">
+                <!-- Haeder Start -->
+                <div class="offcanvas__header">
+                    <div class="brand-logo">
+                        <img src="assets/images/cart-bag-fill.svg" alt="cart" />
+                        <div class="title">My Cart <span>(3 items)</span></div>
+                    </div>
+                    <button type="button" class="btn__close" data-bs-dismiss="offcanvas">
+                        <i class="ri-close-large-line"></i>
+                    </button>
+                </div>
+                <!-- Haeder End -->
+                <div class="offcanvas__body">
+                    <div class="carts__overflow">
+                        <!-- Shop Here -->
+                        <div class="shop__name">
+                            <div class="fashion__shop">
+                                <h4 class="title">
+                                    <span class="dot"></span>
+                                    Online Fashion Shop
+                                </h4>
+                                <div class="rating">
+                                    <span class="star">
+                                        <i class="ri-star-fill"></i>
+                                    </span>
+                                    <span>4.5</span>
+                                    <span>(10k)</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <!-- ProductCard Item -->
+                                <div class="productCard__item">
+                                    <a href="#" class="thumb">
+                                        <img src="assets/images/popular/popular-prod-01.png" alt="product" />
+                                    </a>
+                                    <div class="content__area">
+                                        <div class="top__area">
+                                            <div class="brand">Unknown Brand</div>
+                                            <h4 class="product__name">
+                                                <a href="#">Baby Queen Dress</a>
+                                            </h4>
+                                            <span class="remove">
+                                                <img src="assets/images/delete.svg" alt="" />
+                                            </span>
+                                        </div>
+                                        <div class="price__container">
+                                            <span class="current__price">$20.00</span>
+                                            <del class="original__price">$40.00</del>
+                                            <span class="discount">50% OFF</span>
+                                        </div>
+                                        <div class="mt-3 d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                                            <div class="size__area">
+                                                <span>L</span>
+                                                <span>Pink</span>
+                                            </div>
+
+                                            <div class="quantity">
+                                                <button type="button" class="decressQnt">
+                                                    <span class="bar"></span>
+                                                </button>
+                                                <input class="qnttinput" type="number" disabled value="0" min="01" max="100" />
+                                                <button type="button" class="incressQnt">
+                                                    <span class="bar"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ProductCard Item -->
+                                <div class="productCard__item">
+                                    <a href="#" class="thumb">
+                                        <img src="assets/images/popular/popular-prod-02.png" alt="product" />
+                                    </a>
+                                    <div class="content__area">
+                                        <div class="top__area">
+                                            <div class="brand">Unknown Brand</div>
+                                            <h4 class="product__name">
+                                                <a href="#">Baby Queen Dress</a>
+                                            </h4>
+                                            <span class="remove">
+                                                <img src="assets/images/delete.svg" alt="" />
+                                            </span>
+                                        </div>
+                                        <div class="price__container">
+                                            <span class="current__price">$20.00</span>
+                                            <del class="original__price">$40.00</del>
+                                            <span class="discount">50% OFF</span>
+                                        </div>
+                                        <div class="mt-3 d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                                            <div class="size__area">
+                                                <span>L</span>
+                                                <span>Pink</span>
+                                            </div>
+
+                                            <div class="quantity">
+                                                <button type="button" class="decressQnt">
+                                                    <span class="bar"></span>
+                                                </button>
+                                                <input class="qnttinput" type="number" disabled value="0" min="01" max="100" />
+                                                <button type="button" class="incressQnt">
+                                                    <span class="bar"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="voucher__area">
+                                <div class="title">
+                                    <div class="icon"><img src="assets/images/ticket.svg" alt="ticket" /></div>
+                                    Apply Store voucher
+                                </div>
+                                <div class="voucher__btn"><i class="ri-arrow-right-s-line"></i></div>
+                            </a>
+                        </div>
+                        <!-- Shop Here -->
+                        <div class="shop__name">
+                            <div class="fashion__shop">
+                                <h4 class="title">
+                                    <span class="dot"></span>
+                                    Live Shopping BD
+                                </h4>
+                                <div class="rating">
+                                    <span class="star">
+                                        <i class="ri-star-fill"></i>
+                                    </span>
+                                    <span>4.5</span>
+                                    <span>(10k)</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <!-- ProductCard Item -->
+                                <div class="productCard__item">
+                                    <a href="#" class="thumb">
+                                        <img src="assets/images/popular/popular-prod-01.png" alt="product" />
+                                    </a>
+                                    <div class="content__area">
+                                        <div class="top__area">
+                                            <div class="brand">Unknown Brand</div>
+                                            <h4 class="product__name">
+                                                <a href="#">Baby Queen Dress</a>
+                                            </h4>
+                                            <span class="remove">
+                                                <img src="assets/images/delete.svg" alt="" />
+                                            </span>
+                                        </div>
+                                        <div class="price__container">
+                                            <span class="current__price">$20.00</span>
+                                            <del class="original__price">$40.00</del>
+                                            <span class="discount">50% OFF</span>
+                                        </div>
+                                        <div class="mt-3 d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                                            <div class="size__area">
+                                                <span>L</span>
+                                                <span>Pink</span>
+                                            </div>
+
+                                            <div class="quantity">
+                                                <button type="button" class="decressQnt">
+                                                    <span class="bar"></span>
+                                                </button>
+                                                <input class="qnttinput" type="number" disabled value="0" min="01" max="100" />
+                                                <button type="button" class="incressQnt">
+                                                    <span class="bar"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ProductCard Item -->
+                                <div class="productCard__item">
+                                    <a href="#" class="thumb">
+                                        <img src="assets/images/popular/popular-prod-02.png" alt="product" />
+                                    </a>
+                                    <div class="content__area">
+                                        <div class="top__area">
+                                            <div class="brand">Unknown Brand</div>
+                                            <h4 class="product__name">
+                                                <a href="#">Baby Queen Dress</a>
+                                            </h4>
+                                            <span class="remove">
+                                                <img src="assets/images/delete.svg" alt="" />
+                                            </span>
+                                        </div>
+                                        <div class="price__container">
+                                            <span class="current__price">$20.00</span>
+                                            <del class="original__price">$40.00</del>
+                                            <span class="discount">50% OFF</span>
+                                        </div>
+                                        <div class="mt-3 d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                                            <div class="size__area">
+                                                <span>L</span>
+                                                <span>Pink</span>
+                                            </div>
+
+                                            <div class="quantity">
+                                                <button type="button" class="decressQnt">
+                                                    <span class="bar"></span>
+                                                </button>
+                                                <input class="qnttinput" type="number" disabled value="0" min="01" max="100" />
+                                                <button type="button" class="incressQnt">
+                                                    <span class="bar"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="voucher__area">
+                                <div class="title">
+                                    <div class="icon"><img src="assets/images/ticket.svg" alt="ticket" /></div>
+                                    Apply Store voucher
+                                </div>
+                                <div class="voucher__btn"><i class="ri-arrow-right-s-line"></i></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cart__footer">
+                        <div class="total__amount">
+                            <span>Cart Amount</span>
+                            <div class="amount">$75.00</div>
+                        </div>
+                        <div class="btn__group w-100">
+                            <a href="#" class="rs-btn rs-btn-primary w-100">Proceed to Checkout<i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Cart menu Flyout -->
+        </header>
+        <!-- Header End -->
+
+        <!-- User Dashboard Start -->
+        <div class="user__dashboard">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="dashboard__wrapper">
+                            <!-- Sidebar -->
+                            <div class="sidebar">
+                                <!-- Profile Start -->
+                                <div class="profile">
+                                    <div class="thumb">
+                                        <img src="assets/images/user-thumb.png" alt="avatar" />
+                                    </div>
+                                    <div class="content">
+                                        <h4>Kamrul Hasan Rubel</h4>
+                                        <span>+880 01768 752 369</span>
+                                    </div>
+                                </div>
+                                <!-- Profile End -->
+                                <!-- Sidebar Menu Start -->
+                                <ul class="sidebar__menu">
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                    <li><a href="#">Wishlist</a></li>
+                                    <li><a href="#">My Profile</a></li>
+                                    <li><a href="#">Manage Address</a></li>
+                                    <li><a href="#">Support Ticket</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                                <!-- Sidebar Menu End -->
+                            </div>
+                            <!-- Content Area -->
+                            <div class="content__area">
+                                <!-- Content Header -->
+                                <div class="content__header">
+                                    <h4 class="title">Dashboard</h4>
+                                </div>
+                                <!-- Content Main -->
+                                <div class="content__main">Hello</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- User Dashboard End -->
+
+        <!-- JS -->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <!-- Popper js -->
+        <script src="assets/js/popper.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+        <!-- fancybox -->
+        <script src="assets/js/jquery.fancybox.min.js"></script>
+        <!-- swiper slider -->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!-- Select 2 Js -->
+        <script src="assets/js/select2.min.js"></script>
+        <!-- Smooth Scroll -->
+        <script src="assets/js/smooth-scroll.js"></script>
+        <!-- coundown js -->
+        <script src="assets/js/yscountdown.min.js"></script>
+        <!-- main js -->
+        <script src="assets/js/scripts.js"></script>
+    </body>
+</html>

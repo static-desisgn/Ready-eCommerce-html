@@ -771,7 +771,7 @@
         <!-- Breadcrumb Section End -->
 
         <!-- Checkout Section Start -->
-        <section class="checkout__section mt-20">
+        <section class="checkout__section mt-20 pb-40">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
@@ -865,147 +865,137 @@
                                 </div>
                             </div>
                             <div class="shipping__order">
-                                <div class="shipping__title">Shipping Details</div>
-                                <div class="border radius-6 py-20 px-20 mb-15">
+                                <div class="title__area">
+                                    <div class="shipping__title mb-0">Shipping Details</div>
+                                    <a href="#" class="solid__btn" data-bs-toggle="modal" data-bs-target="#saveAddressModal">Change</a>
+                                </div>
+                                <!-- Shipping Wrapper -->
+                                <div class="shipping__wrapper">
+                                    <div class="addressBook">
+                                        <div class="icon">
+                                            <img src="assets/images/map.png" alt="map" />
+                                            <span>home</span>
+                                        </div>
+                                        <div class="content">
+                                            <h4>Abul Kalam</h4>
+                                            <span>+880 0136 326 583</span>
+                                            <span>Sekhertek, 52/A, Adabor, Mohammadpur-1207</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Shipping Wrapper -->
+                                <div class="shipping__wrapper">
                                     <form action="#" method="get">
                                         <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="text" name="f_name" class="form-control" placeholder="First Name" />
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="input-group">
+                                                    <label for="name">Name</label>
+                                                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter name" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="input-group">
+                                                    <label for="phone">Phone</label>
+                                                    <input type="number" name="phone" id="phone" class="form-control" placeholder="Enter phone" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="text" name="l_name" class="form-control" placeholder="Last Name" />
+                                                <div class="input-group">
+                                                    <label for="area">Area</label>
+                                                    <input type="text" name="area" id="area" class="form-control" placeholder="Enter area" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="number" name="number" class="form-control" placeholder="Mobile Number" />
+                                                <div class="input-group">
+                                                    <label for="flat">Flat</label>
+                                                    <input type="text" name="flat" id="flat" class="form-control" placeholder="Flat no" />
                                                 </div>
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="email" name="email" class="form-control" placeholder="Email Address" />
+                                                <div class="input-group">
+                                                    <label for="postal_code">Postal Code</label>
+                                                    <input type="text" name="postal_code" id="postal_code" class="form-control" placeholder="Enter postal code" />
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="number" name="pin" class="form-control" placeholder="ZIP / PIN Code*" />
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="input-group">
+                                                    <label for="address_line_1">Address Line 1</label>
+                                                    <input type="text" name="address_line_1" id="address_line_1" class="form-control" placeholder="Enter address line 1" />
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <select class="form__dropdown form-control bg-transparent" data-width="100%" data-minimum-results-for-search="Infinity">
-                                                        <option value="all" selected>Select Country</option>
-                                                        <option value="bangladesh">bangladesh</option>
-                                                        <option value="india">india</option>
-                                                        <option value="united_states">united states</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="text" name="strate_address" class="form-control" placeholder="State Address" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <select class="form__dropdown form-control bg-transparent" data-width="100%" data-minimum-results-for-search="Infinity">
-                                                        <option value="all" selected>City / Town</option>
-                                                        <option value="bangladesh">bangladesh</option>
-                                                        <option value="india">india</option>
-                                                        <option value="united_states">united states</option>
-                                                    </select>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="input-group">
+                                                    <label for="address_line_2">Address Line 2</label>
+                                                    <input type="text" name="address_line_2" id="address_line_2" class="form-control" placeholder="Enter address line 2" />
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <div class="input-group mb-15">
-                                                    <textarea name="address" cols="30" rows="5" class="form-control" placeholder="Enter Address"></textarea>
+                                                <h4 class="tag__title">Address Tag</h4>
+                                                <div class="d-flex align-items-center justify-content-between gap-4 flex-wrap">
+                                                    <div class="radio__area">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="radioDefault" id="radioHome" checked />
+                                                            <label class="form-check-label" for="radioHome">home</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="radioDefault" id="radioOffice" />
+                                                            <label class="form-check-label" for="radioOffice">office</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="radioDefault" id="radioOther" />
+                                                            <label class="form-check-label" for="radioOther">other</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox__area">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="checkDefault" />
+                                                            <label class="form-check-label" for="checkDefault">Make it default address</label>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
-                                <!-- <div class="d-flex align-items-center justify-content-between gap-4">
-                                    <div class="">
-                                        <div class="shipping__title">Billing Details</div>
-                                        <label class="checkbox__wrapper">
-                                            <input class="form-check-input" type="checkbox" />
-                                            <span>Same as shipping information</span>
-                                        </label>
-                                    </div>
-                                    <div class="btn__group">
-                                        <a href="#" class="sg-btn sg-btn-dark billingCreateBtn"> Create Billing Address<i class="ri-add-large-line ps-3"></i> </a>
+                                <div class="shipping__title">Note <span>(Optional)</span></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="input-group">
+                                            <textarea name="address" cols="30" rows="5" class="form-control" placeholder="Write your note here ..."></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="billing__address border radius-6 py-20 px-20 mb-15 mt-20">
-                                    <div class="shipping__title">Billing Details</div>
-                                    <form action="#" method="get">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="text" name="f_name" class="form-control" placeholder="First Name" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="text" name="l_name" class="form-control" placeholder="Last Name" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="number" name="number" class="form-control" placeholder="Mobile Number" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="email" name="email" class="form-control" placeholder="Email Address" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="number" name="pin" class="form-control" placeholder="ZIP / PIN Code*" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <select class="form__dropdown form-control bg-transparent" data-width="100%" data-minimum-results-for-search="Infinity">
-                                                        <option value="all" selected>Select Country</option>
-                                                        <option value="bangladesh">bangladesh</option>
-                                                        <option value="india">india</option>
-                                                        <option value="united_states">united states</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <input type="text" name="strate_address" class="form-control" placeholder="State Address" />
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-6">
-                                                <div class="input-group mb-15">
-                                                    <select class="form__dropdown form-control bg-transparent" data-width="100%" data-minimum-results-for-search="Infinity">
-                                                        <option value="all" selected>City / Town</option>
-                                                        <option value="bangladesh">bangladesh</option>
-                                                        <option value="india">india</option>
-                                                        <option value="united_states">united states</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group mb-15">
-                                                    <textarea name="address" cols="30" rows="5" class="form-control" placeholder="Enter Address"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group mb-15">
-                                                    <textarea name="note" cols="30" rows="5" class="form-control" placeholder="Order Notes"></textarea>
+                                <div class="shipping__wrapper mb-0">
+                                    <div class="shipping__title">Payment Method</div>
+                                    <div class="row gy-4">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="radio__area">
+                                                <div class="form-check border-none p-0 round-0">
+                                                    <input class="form-check-input" type="radio" name="radioDefault" id="delivery" checked />
+                                                    <label class="form-check-label text-capitalize" for="delivery">
+                                                        <div class="icon">
+                                                            <img src="assets/images/money-icon.png" alt="money" />
+                                                        </div>
+                                                        Cash on Delivery
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
-                                </div> -->
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="radio__area">
+                                                <div class="form-check border-none p-0 round-0">
+                                                    <input class="form-check-input" type="radio" name="radioDefault" id="debitCard" />
+                                                    <label class="form-check-label text-capitalize" for="debitCard">
+                                                        <div class="icon">
+                                                            <img src="assets/images/debit-card.png" alt="money" />
+                                                        </div>
+                                                        Credit or Debit Card
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1028,7 +1018,7 @@
                             </div>
                         </div>
                         <div class="btn__group w-100 mt-25">
-                            <a href="#" class="rs-btn rs-btn-primary py-15 w-100">Place Order</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#successModal" class="rs-btn rs-btn-primary py-15 w-100">Place Order</a>
                         </div>
                     </div>
                 </div>
@@ -1144,6 +1134,87 @@
             </div>
         </footer>
         <!-- Footer Section End -->
+
+        <!-- Success Modal Start -->
+        <div class="custom__modal modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal__body">
+                        <div class="success__area text-center">
+                            <div class="icon"><i class="ri-check-line"></i></div>
+                            <div class="content">
+                                <h4>Your order has been placed</h4>
+                                <div class="order">Your order ID is: 265865</div>
+                                <p>You will receive an order confirmation email with details of your order.</p>
+                            </div>
+                        </div>
+                        <!-- Btn Group -->
+                        <div class="btn__group mt-20">
+                            <a href="#" class="rs-btn rs-btn-primary w-100">Continue Shopping</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Success Modal End -->
+
+        <!-- Save Address Modal Start -->
+        <div class="custom__modal modal fade" id="saveAddressModal" tabindex="-1" aria-labelledby="saveAddressModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal__header">
+                        <h4 class="title">Saved Address</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal__body">
+                        <!-- Form Check -->
+                        <div class="address__container">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="address_01" checked />
+                                <label class="form-check-label" for="address_01">
+                                    <div class="addressBook">
+                                        <div class="icon">
+                                            <img src="assets/images/map.png" alt="map" />
+                                            <span>home</span>
+                                        </div>
+                                        <div class="content">
+                                            <h4>Abul Kalam</h4>
+                                            <span>+880 0136 326 583</span>
+                                            <span>Sekhertek, 52/A, Adabor, Mohammadpur-1207</span>
+                                            <p>Default Address</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Form Check -->
+                        <div class="address__container">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="address_02" />
+                                <label class="form-check-label" for="address_02">
+                                    <div class="addressBook">
+                                        <div class="icon">
+                                            <img src="assets/images/map.png" alt="map" />
+                                            <span>office</span>
+                                        </div>
+                                        <div class="content">
+                                            <h4>Abul Kalam</h4>
+                                            <span>+880 0136 326 583</span>
+                                            <span>Sah Ali PLaza, Shop #B36, Level #4, Mirpur 10, Dhaka-1207</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Btn Group -->
+                        <div class="btn__group mt-30">
+                            <a href="#" class="rs-btn rs-btn-outline w-100"><i class="ri-add-large-line me-3"></i>New Address</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Save Address Modal End -->
 
         <!-- JS -->
         <script src="assets/js/jquery-3.7.1.min.js"></script>

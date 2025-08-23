@@ -545,8 +545,11 @@
         border: 1px solid var(--color-state-300);
 
         &:checked {
-            background-color: var(--color-primary);
-            border-color: var(--color-primary);
+            background-color: var(--color-primary-900);
+            border-color: var(--color-primary-900);
+        }
+        &:focus {
+            box-shadow: none;
         }
     }
 

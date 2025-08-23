@@ -75,6 +75,7 @@ form {
             box-shadow: none;
             outline: none;
             border-color: var(--color-primary-900);
+            z-index: initial;
         }
     }
     textarea.form-control,

@@ -1,0 +1,20 @@
+/*********************************
+/*  User Dashboard Start
+*********************************/
+.dashboard__wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    .sidebar {
+        width: 360px;
+    }
+    .content__area {
+        flex: 1;
+    }
+    .content__main {
+        background: var(--color-state-100);
+    }
+}
+/*********************************
+/*  User Dashboard End
+*********************************/

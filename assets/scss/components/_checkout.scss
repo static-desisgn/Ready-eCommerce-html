@@ -156,6 +156,7 @@
     background: var(--color-state-100);
     padding: 16px;
     border-radius: 12px;
+    margin-top: 32px;
 
     .title {
         font-weight: 500;
@@ -190,6 +191,210 @@
             right: 8px;
             transform: translateY(-50%);
         }
+    }
+}
+
+// Shipping Order
+.shipping__order {
+    margin-top: 32px;
+
+    .title__area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 16px;
+
+        .solid__btn {
+            color: var(--color-state-950);
+        }
+    }
+
+    .shipping__title {
+        font-weight: var(--font-medium);
+        font-size: 20px;
+        line-height: 28px;
+        color: var(--color-state-950);
+        display: block;
+        margin-bottom: 16px;
+
+        span {
+            color: var(--color-state-500);
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: var(--font-regular);
+        }
+    }
+    .shipping__wrapper {
+        border: 1px solid var(--color-state-200);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 32px;
+    }
+
+    .tag__title {
+        font-weight: var(--font-medium);
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--color-state-950);
+        display: block;
+        margin-bottom: 8px;
+    }
+    .radio__area {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        .form-check {
+            border: 1px solid var(--color-state-200);
+            border-radius: 100px;
+            padding: 8px 10px;
+            padding-right: 15px;
+            &-label {
+                color: var(--color-primary-900);
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .icon {
+                    width: 48px;
+                    height: 48px;
+                    border: 1px solid var(--color-state-200);
+                    border-radius: 12px;
+                    @include flexbox-center;
+
+                    img {
+                        width: auto;
+                        height: auto;
+                        max-width: 32px;
+                    }
+                }
+            }
+            input {
+                width: 18px;
+                height: 18px;
+                &:checked {
+                    background-color: var(--color-primary-900);
+                    border-color: var(--color-primary-900);
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .checkbox__area {
+        .form-check {
+            &-label {
+                font-size: 14px;
+                line-height: 20px;
+                color: var(--color-state-500);
+            }
+            input {
+                width: 20px;
+                height: 20px;
+                border: 1px solid var(--color-state-300);
+                &:checked {
+                    background-color: var(--color-primary-900);
+                    border-color: var(--color-primary-900);
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+// Address Book Start
+.addressBook {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include respond(phone-xm) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icon {
+        width: 88px;
+        height: 80px;
+        background: var(--color-state-50);
+        border-radius: 8px;
+        @include flexbox-center;
+        gap: 8px;
+        flex-direction: column;
+        color: var(--color-primary-900);
+
+        img {
+            width: 24px;
+        }
+        span {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: var(--color-white);
+            padding: 3px 6px;
+            background: var(--color-state-800);
+            border-radius: 6px;
+        }
+    }
+    .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        h4 {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 2%;
+            color: var(--color-state-950);
+            margin: 0;
+            display: block;
+        }
+        span {
+            font-weight: var(--font-regular);
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--color-state-500);
+            display: block;
+        }
+        p {
+            // font-family: Mulish;
+            font-weight: 400;
+            font-style: Italic;
+            font-size: 14px;
+            line-height: 18px;
+            color: #3b82f6;
+        }
+    }
+}
+
+.address__container {
+    margin-bottom: 16px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    .form-check {
+        position: relative;
+    }
+    .addressBook {
+        border: 1px solid var(--color-state-200);
+        padding: 16px;
+        border-radius: 8px;
+        align-items: flex-start;
+    }
+    input {
+        position: absolute;
+        right: 16px;
+        top: 16px;
     }
 }
 /*********************************
