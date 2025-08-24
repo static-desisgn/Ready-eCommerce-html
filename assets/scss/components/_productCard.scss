@@ -15,6 +15,7 @@
 .productCard {
     border: 1px solid var(--color-state-100);
     border-radius: var(--radius-12);
+    background: var(--color-white);
     // padding: 8px;
 
     &:hover {
@@ -33,7 +34,7 @@
     }
 
     &.disable {
-        .product__thumb,
+        .product__thumb img,
         .product__title,
         .product__availability .rating,
         .product__price {
